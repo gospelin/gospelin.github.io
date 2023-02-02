@@ -1,10 +1,10 @@
-Hi 👋 My name is Gospel Isaac
-=============================
+## 👋 My name is Gospel Isaac
+========================================
 
-Software Engineer
+### Software Engineer
 -----------------
 
-I'm Gospel Isaac A driven and passionate software engineer, always seeking to expand my skill set and stay ahead of the latest industry trends. With a strong focus on delivering high-quality and reliable solutions, I bring creativity and attention to detail to every project I work on. Whether collaborating with a team or taking the lead on independent projects, I consistently strive to exceed expectations and make a meaningful impact.
+I'm a driven and passionate software engineer, always seeking to expand my skill set and stay ahead of the latest industry trends. With a strong focus on delivering high-quality and reliable solutions, I bring creativity and attention to detail to every project I work on. Whether collaborating with a team or taking the lead on independent projects, I consistently strive to exceed expectations and make a meaningful impact.
 
 * 🌍  I'm based in Nigeria
 * ✉️  You can contact me at [gospelin.gi@gmail.com](mailto:gospelin.gi@gmail.com)
