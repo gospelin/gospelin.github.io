@@ -1,0 +1,47 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+header {
+    background: url('images/path_to_background_image.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+header .container {
+    max-width: 800px;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.skills .row div {
+    text-align: center;
+}
+
+.skills img {
+    margin-bottom: 10px;
+}
+
+.socials a {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.badges img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
