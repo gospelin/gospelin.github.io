@@ -1,5 +1,8 @@
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		 line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -44,4 +47,49 @@ section {
     width: 100%;
     max-width: 300px;
     margin-bottom: 20px;
+}
+
+
+header, footer {
+    background-color: #1c1917;
+}
+
+header h1, header p, footer p {
+    color: #fff;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.25rem;
+}
+
+.about ul, .about ul li, .about ul ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about ul ul {
+    padding-left: 20px;
+}
+
+.skills img, .socials img, .badges img {
+    margin-bottom: 0.5rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (min-width: 992px) {
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    header p {
+        font-size: 1.5rem;
+    }
 }
