@@ -1,5 +1,5 @@
 ## 👋 My name is Gospel Isaac
-================
+========
 
 ### Software Engineer
 --------------
