@@ -1969,7 +1969,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>© 2025 Gospel Isaac. All rights reserved.</p>
+            <p>© <span id="copyright-year"></span> Gospel Isaac. All rights reserved.</p>
         </div>
     </footer>
 
@@ -1999,6 +1999,9 @@
         html.setAttribute('data-theme', savedTheme);
         updateToggleIcons(savedTheme);
         themeToggle.addEventListener('click', toggleTheme);
+
+        // Set dynamic copyright year
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
         // Mobile Menu
         const mobileMenu = document.querySelector('#mobileMenu');
