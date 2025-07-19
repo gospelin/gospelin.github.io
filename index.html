@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Gospel Isaac - Software Engineer | Full-Stack Developer | Tech Instructor</title>
+    <title>Gospel Isaac - Software Engineer | Full-Stack Developer | Tech Facilitator</title>
     <meta name="description"
-        content="Portfolio of Gospel Isaac, an elite software engineer, full-stack developer, and tech visionary specializing in cutting-edge web applications and revolutionary educational platforms.">
+        content="Portfolio of Gospel Isaac, a software engineer, full-stack developer, and tech visionary specializing in cutting-edge web applications and revolutionary educational platforms.">
     <meta name="keywords"
-        content="elite software engineer, full-stack developer, tech visionary, Gospel Isaac, web development, programming, education technology, cybersecurity, AI">
+        content="software engineer, full-stack developer, tech instructor, tech facilitator, Gospel Isaac, web development, programming, education technology, cybersecurity, AI">
     <meta name="author" content="Gospel Isaac">
-    <meta property="og:title" content="Gospel Isaac - Elite Software Engineer & Full-Stack Developer">
+    <meta property="og:title" content="Gospel Isaac - Software Engineer | Full-Stack Developer">
     <meta property="og:description"
         content="Experience the portfolio of Gospel Isaac, showcasing mastery in software engineering, web development, and revolutionary educational technology.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gospelisaac.github.io">
+    <meta property="og:url" content="https://gospelin.github.io">
     <meta property="og:image" content="images/gospel.jpg">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -633,6 +633,7 @@
             border: 2px solid var(--glass-border);
             transition: var(--transition-normal);
             filter: grayscale(20%);
+            box-shadow: var(--shadow-md);
         }
 
         .about-image:hover {
@@ -644,10 +645,10 @@
         .about-image-container::before {
             content: "";
             position: absolute;
-            top: -15px;
-            left: -15px;
-            right: 15px;
-            bottom: 15px;
+            top: -6px;
+            left: -6px;
+            right: 8px;
+            bottom: 8px;
             background: var(--gradient-primary);
             border-radius: var(--radius-xl);
             z-index: -1;
@@ -908,51 +909,207 @@
         /* Testimonials Section */
         .testimonials {
             background: var(--surface);
+            position: relative;
+            overflow: hidden;
+        }
+
+        [data-theme="light"] .testimonials {
+            background: var(--surface-light);
         }
 
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: var(--space-lg);
         }
 
         .testimonial-card {
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
-            border-radius: var(--radius-md);
-            padding: var(--space-md);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
             transition: var(--transition-normal);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
             position: relative;
+            box-shadow: var(--shadow-sm);
+            animation: fadeIn 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+        .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+        .testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+        .testimonial-card:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        [data-theme="light"] .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .testimonial-card::before {
             content: '"';
             position: absolute;
-            top: -10px;
+            top: -15px;
             left: 15px;
-            font-size: 3rem;
+            font-size: clamp(3rem, 8vw, 4rem);
+            font-family: var(--font-display);
             color: var(--primary);
-            opacity: 0.3;
+            opacity: 0.4;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        [data-theme="light"] .testimonial-card::before {
+            color: var(--primary-dark);
+            opacity: 0.5;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .testimonial-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        [data-theme="light"] .testimonial-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
         }
 
         .testimonial-text {
             color: var(--text-secondary);
             margin-bottom: var(--space-md);
             font-style: italic;
-            font-size: clamp(0.9rem, 2.5vw, 1rem);
-            line-height: 1.7;
+            font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+        }
+
+        [data-theme="light"] .testimonial-text {
+            color: var(--text-secondary);
+        }
+
+        .testimonial-author-container {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .testimonial-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            border: 1px solid var(--glass-border);
+            flex-shrink: 0;
+        }
+
+        [data-theme="light"] .testimonial-avatar {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
+            border: 1px solid rgba(0, 0, 0, 0.15);
         }
 
         .testimonial-author {
+            font-family: var(--font-primary);
             font-weight: 600;
             color: var(--text-primary);
-            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+            margin: 0;
+        }
+
+        .testimonial-role {
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        [data-theme="light"] .testimonial-role {
+            color: var(--text-muted);
+        }
+
+        /* Responsive Design for Testimonials Section */
+        @media (max-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-card {
+                padding: var(--space-md);
+            }
+
+            .testimonial-card::before {
+                top: -10px;
+                font-size: clamp(2.5rem, 6vw, 3rem);
+            }
+
+            .testimonial-text {
+                font-size: clamp(0.9rem, 2.5vw, 1rem);
+            }
+
+            .testimonial-author {
+                font-size: clamp(0.9rem, 2.5vw, 1rem);
+            }
+
+            .testimonial-role {
+                font-size: clamp(0.8rem, 2vw, 0.9rem);
+            }
+
+            .testimonial-avatar {
+                width: 36px;
+                height: 36px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonial-card {
+                padding: var(--space-sm);
+            }
+
+            .testimonial-card::before {
+                top: -8px;
+                left: 10px;
+                font-size: clamp(2rem, 5vw, 2.5rem);
+            }
+
+            .testimonial-text {
+                font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+            }
+
+            .testimonial-avatar {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        /* Reduced Motion for Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .testimonial-card {
+                animation: none;
+                opacity: 1;
+            }
+
+            .testimonial-card:hover {
+                transform: none;
+                box-shadow: var(--shadow-sm);
+            }
         }
 
         /* Contact Section */
@@ -968,6 +1125,8 @@
             color: var(--text-secondary);
             margin-bottom: var(--space-lg);
             font-size: clamp(1rem, 3vw, 1.1rem);
+            align-items: center;
+            text-align: center;
         }
 
         .social-links {
@@ -1184,6 +1343,248 @@
                 font-size: 0.9rem;
             }
         }
+
+        /* Education Section */
+        .education {
+            background: var(--surface);
+            position: relative;
+            overflow: hidden;
+        }
+
+        [data-theme="light"] .education {
+            background: var(--surface-light);
+        }
+
+        .education-timeline {
+            position: relative;
+            padding-left: calc(var(--space-lg) + 20px);
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .education-timeline::before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        [data-theme="light"] .education-timeline::before {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
+        }
+
+        .education-item {
+            position: relative;
+            margin-bottom: var(--space-xl);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            backdrop-filter: blur(12px);
+            transition: var(--transition-normal);
+            box-shadow: var(--shadow-sm);
+        }
+
+        [data-theme="light"] .education-item {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-item::before {
+            content: "";
+            position: absolute;
+            left: -30px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px var(--surface), var(--neon-glow);
+            transition: var(--transition-normal);
+        }
+
+        [data-theme="light"] .education-item::before {
+            box-shadow: 0 0 0 4px var(--surface-light), 0 0 10px rgba(99, 102, 241, 0.2);
+        }
+
+        .education-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .education-item:hover::before {
+            background: var(--primary-light);
+            transform: scale(1.2);
+        }
+
+        [data-theme="light"] .education-item:hover {
+            border-color: var(--primary);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .education-item h3 {
+            font-family: var(--font-display);
+            font-size: clamp(1.3rem, 3vw, 1.5rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-sm);
+            line-height: 1.4;
+        }
+
+        .education-date {
+            color: var(--primary);
+            font-family: var(--font-primary);
+            font-weight: 600;
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
+            margin-bottom: var(--space-sm);
+            display: inline-block;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        [data-theme="light"] .education-date {
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--primary-dark);
+        }
+
+        .education-item p {
+            color: var(--text-secondary);
+            font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* Certifications Subsection */
+        .education-item.certifications {
+            padding: var(--space-lg);
+        }
+
+        .certification-list {
+            list-style: none;
+            padding: 0;
+            margin-top: var(--space-md);
+        }
+
+        .certification-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-sm) 0;
+            color: var(--text-secondary);
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            line-height: 1.7;
+            border-bottom: 1px solid var(--glass-border);
+            transition: var(--transition-normal);
+        }
+
+        [data-theme="light"] .certification-list li {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        }
+
+        .certification-list li:last-child {
+            border-bottom: none;
+        }
+
+        .certification-list li:hover {
+            color: var(--text-primary);
+            transform: translateX(5px);
+            background: rgba(99, 102, 241, 0.05);
+            border-radius: var(--radius-sm);
+        }
+
+        [data-theme="light"] .certification-list li:hover {
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .certification-name {
+            font-family: var(--font-primary);
+            font-weight: 600;
+            flex: 1;
+        }
+
+        .certification-date {
+            color: var(--primary);
+            font-weight: 500;
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
+        }
+
+        [data-theme="light"] .certification-date {
+            color: var(--primary-dark);
+        }
+
+        /* Responsive Design for Education Section */
+        @media (max-width: 768px) {
+            .education-timeline {
+                padding-left: calc(var(--space-md) + 10px);
+            }
+
+            .education-timeline::before {
+                left: 5px;
+            }
+
+            .education-item {
+                padding: var(--space-md);
+                margin-bottom: var(--space-lg);
+            }
+
+            .education-item::before {
+                left: -25px;
+                top: 15px;
+                width: 10px;
+                height: 10px;
+            }
+
+            .education-item h3 {
+                font-size: clamp(1.1rem, 2.8vw, 1.3rem);
+            }
+
+            .education-date {
+                font-size: clamp(0.8rem, 2vw, 0.9rem);
+            }
+
+            .education-item p {
+                font-size: clamp(0.9rem, 2.5vw, 1rem);
+            }
+
+            .certification-list li {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--space-xs);
+                padding: var(--space-sm) var(--space-xs);
+            }
+
+            .certification-date {
+                font-size: clamp(0.8rem, 2vw, 0.9rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .education-timeline {
+                padding-left: calc(var(--space-sm) + 10px);
+            }
+
+            .education-item {
+                padding: var(--space-sm);
+            }
+
+            .education-item::before {
+                left: -20px;
+                top: 12px;
+                width: 8px;
+                height: 8px;
+            }
+
+            .education-item h3 {
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
+            }
+        }
     </style>
 </head>
 
@@ -1203,20 +1604,20 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">
-                <span class="logo-text">Gospel Isaac</span>
+                <span class="logo-text">GIGO</span>
             </a>
             <div class="nav-right">
                 <div class="nav-links">
                     <a href="#home" class="nav-link">Home</a>
                     <a href="#about" class="nav-link">About</a>
+                    <a href="#education" class="nav-link">Education</a>
                     <a href="#skills" class="nav-link">Skills</a>
                     <a href="#experience" class="nav-link">Experience</a>
                     <a href="#projects" class="nav-link">Projects</a>
                     <a href="#testimonials" class="nav-link">Testimonials</a>
                     <a href="#contact" class="nav-link">Contact</a>
-                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i
-                            class="fas fa-moon"></i></button>
                 </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
                 <div class="mobile-menu" aria-expanded="false" id="mobileMenu">
                     <span class="hamburger"></span>
                     <span class="hamburger"></span>
@@ -1229,13 +1630,12 @@
             <div class="mobile-nav-links">
                 <a href="#home" class="mobile-nav-link">Home</a>
                 <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#education" class="mobile-nav-link">Education</a>
                 <a href="#skills" class="mobile-nav-link">Skills</a>
                 <a href="#experience" class="mobile-nav-link">Experience</a>
                 <a href="#projects" class="mobile-nav-link">Projects</a>
                 <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
                 <a href="#contact" class="mobile-nav-link">Contact</a>
-                <button class="mobile-nav-link theme-toggle" id="mobileThemeToggle" aria-label="Toggle theme"><i
-                        class="fas fa-moon"></i></button>
             </div>
         </div>
         <div class="mobile-nav-overlay" aria-hidden="true" id="mobileNavOverlay"></div>
@@ -1256,12 +1656,12 @@
                     <span class="stat-label">Years of Experience</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">20+</span>
+                    <span class="stat-number">10+</span>
                     <span class="stat-label">Projects Completed</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">2</span>
-                    <span class="stat-label">Awards Won</span>
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Certifications</span>
                 </div>
             </div>
         </div>
@@ -1291,6 +1691,52 @@
         </div>
     </section>
 
+    <!-- Education Section -->
+    <section id="education" class="section education">
+        <div class="section-container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <h3>B.Tech in Computer Science</h3>
+                    <span class="education-date">2014 - 2019</span>
+                    <p>Federal University of Technology, Owerri</p>
+                </div>
+                <div class="education-item">
+                    <h3>Web Development Trainee - ALCwithGoogle</h3>
+                    <span class="education-date">2017 - 2018</span>
+                    <p>Mastered fundamentals of professional web development, including HTML, CSS, and JavaScript. Developed
+                        dynamic web applications, such as a pixel-art mixer, and collaborated in a peer-learning environment
+                        to enhance problem-solving skills.</p>
+                </div>
+                <div class="education-item">
+                    <h3>Web Specialist Trainee - Andela Learning Community</h3>
+                    <span class="education-date">2018 - 2019</span>
+                    <p>Advanced web development skills through rigorous training focused on JavaScript, APIs, and responsive
+                        design. Developed a fully functional contact application and engaged in collaborative learning
+                        sessions to strengthen teamwork and problem-solving abilities.</p>
+                </div>
+                <div class="education-item">
+                    <h3>Software Engineering Program - ALX Africa</h3>
+                    <span class="education-date">2022 - 2023</span>
+                    <p>Completed an intensive software engineering course, mastering C, Python, System Engineering, DevOps,
+                        and Networking. Built projects focusing on low-level programming, automation, and network
+                        configuration, enhancing skills in scalable system design and deployment.</p>
+                </div>
+                <div class="education-item certifications">
+                    <h3>Certifications</h3>
+                    <ul class="certification-list">
+                        <li><span class="certification-name">Programming in Python (Meta)</span> - <span
+                                class="certification-date">2023</span></li>
+                        <li><span class="certification-name">Google Africa Mobile Web Specialist (ALCwithGoogle)</span> -
+                            <span class="certification-date">2018</span></li>
+                        <li><span class="certification-name">Web Development Beginner (ALCwithGoogle)</span> - <span
+                                class="certification-date">2018</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="section skills">
         <div class="section-container">
@@ -1304,12 +1750,12 @@
                     <i class="fab fa-js"></i>
                     <span>JavaScript</span>
                 </div>
-                <div class="skill-card">
+                <!--<div class="skill-card">
                     <i class="fab fa-node-js"></i>
                     <span>Node.js</span>
-                </div>
+                </div>-->
                 <div class="skill-card">
-                    <i class="fab fa-php"></i>
+                    <i class="fab fa-php"></i><br
                     <span>PHP</span>
                 </div>
                 <div class="skill-card">
@@ -1325,8 +1771,20 @@
                     <span>Database</span>
                 </div>
                 <div class="skill-card">
-                    <i class="fab fa-git-alt"></i>
+                    <i class="fab fa-git-alt"></i><br
                     <span>Git</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code"></i><br>
+                    <span>C</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-server"></i>
+                    <span>DevOps</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-network-wired"></i>
+                    <span>Networking</span>
                 </div>
             </div>
         </div>
@@ -1338,86 +1796,75 @@
             <h2 class="section-title">Experience</h2>
             <div class="experience-timeline">
                 <div class="experience-item">
-                    <h3>Senior Full-Stack Developer</h3>
-                    <span class="experience-date">2022 - Present</span>
-                    <p>Leading development of a next-generation educational platform, integrating AI-driven
-                        personalization and scalable microservices architecture.</p>
+                    <h3>Freelance Full-Stack Developer</h3>
+                    <span class="experience-date">2024 - Present</span>
+                    <p>Designed and developed multiple web applications, including educational platforms and school management systems,
+                        using technologies like Laravel, Flask, MySQL, Tailwind CSS, and JavaScript. Key projects include GIGACAD, Aunty
+                        Anne's International School website, and Mr Solution, focusing on responsive design, scalable architecture, and
+                        user-centric features.</p>
                 </div>
                 <div class="experience-item">
-                    <h3>Software Engineer</h3>
-                    <span class="experience-date">2019 - 2022</span>
-                    <p>Developed secure, high-performance APIs and front-end interfaces for a global e-commerce
-                        platform, improving user engagement by 40%.</p>
+                    <h3>Freelance Web Developer</h3>
+                    <span class="experience-date">2022 - 2024</span>
+                    <p>Built and maintained websites for small businesses and educational institutions, utilizing HTML, CSS, JavaScript,
+                        and PHP. Delivered projects with a focus on accessibility, mobile responsiveness, and modern design principles,
+                        including a personal portfolio showcasing freelance work.</p>
                 </div>
                 <div class="experience-item">
-                    <h3>Junior Developer</h3>
-                    <span class="experience-date">2016 - 2019</span>
-                    <p>Contributed to open-source projects and built responsive web applications, honing skills in
-                        JavaScript, React, and Node.js.</p>
+                    <h3>IT Facilitator - Spiral Tech Network Limited</h3>
+                    <span class="experience-date">June 2022 - August 2022</span>
+                    <p>Trained over 100 students in programming fundamentals, HTML, and CSS, fostering collaborative
+                        learning through hands-on workshops and practical exercises.</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Lead IT Coordinator - Bliz Ventures Enterprise</h3>
+                    <span class="experience-date">March 2019 - September 2019</span>
+                    <p>Managed a team of over 100 field agents for the Tradermoni scheme, ensuring efficient app deployment,
+                        providing technical support, and conducting training to enhance operational efficiency.</p>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Projects Section -->
     <section id="projects" class="section projects">
         <div class="section-container">
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="images/project1-placeholder.webp" alt="EduPlatform" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title">EduPlatform</h3>
-                        <p class="project-description">A revolutionary educational platform with AI-driven personalized
-                            learning paths and real-time analytics.</p>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="images/auntyannes-placeholder.png" alt="Aunty Anne's School Website"
-                        class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title">Aunty Anne's International School</h3>
-                        <p class="project-description">A professional school website for Aunty Anne's International
-                            School, showcasing academic programs and facilities, built with modern web technologies.</p>
-                        <a href="https://github.com/gospelin/AAIS" class="project-link">View on GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
                     <img src="images/gigacad-placeholder.png" alt="GIGACAD Project" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">GIGACAD - School Management System</h3>
                         <p class="project-description">A comprehensive school management system built with Flask, MySQL,
-                            SQLAlchemy, and AJAX. Features include automated result generation, teacher-class
-                            assignments, subject management, and student management.</p>
+                            SQLAlchemy, and AJAX. Features include automated result generation, teacher-class assignments,
+                            subject management, and student management.</p>
                         <a href="https://github.com/gospelin/gigacad" class="project-link">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/auntyannes-placeholder.png" alt="Aunty Anne's School Website" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Aunty Anne's International School</h3>
+                        <p class="project-description">A professional school website for Aunty Anne's International School, showcasing
+                            academic programs and facilities, built with modern web technologies.</p>
+                        <a href="https://github.com/gospelin/AAIS" class="project-link">View on GitHub</a>
                     </div>
                 </div>
                 <div class="project-card">
                     <img src="images/cybersecurity-placeholder.png" alt="Cybersecurity Platform" class="project-image">
                     <div class="project-content">
-                        <h3 class="project-title">Mr Solution - Educational Cybersecurity Platform</h3>
-                        <p class="project-description">A Laravel-based platform offering tools like QR code generator,
-                            code viewer, code encrypter, and WhatsApp bot, built with HTML, CSS, Tailwind CSS, and PHP.
-                        </p>
+                        <h3 class="project-title">Mr Solution Tech - Educational Cybersecurity Platform</h3>
+                        <p class="project-description">A Laravel-based platform offering tools like QR code generator, code
+                            viewer, code encrypter, and WhatsApp bot, built with HTML, CSS, Tailwind CSS, and PHP.</p>
                         <a href="https://github.com/gospelin/solutions" class="project-link">View on GitHub</a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="images/project2-placeholder.webp" alt="SecureAPI" class="project-image">
+                    <img src="images/portfolio-placeholder.png" alt="Personal Portfolio" class="project-image">
                     <div class="project-content">
-                        <h3 class="project-title">SecureAPI</h3>
-                        <p class="project-description">A robust API system with advanced cybersecurity measures, serving
-                            millions of requests daily.</p>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="images/portfolio-placeholder.png" alt="Portfolio" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title">Portfolio</h3>
-                        <p class="project-description">This very portfolio, showcasing my skills and projects with a
-                            modern, responsive design.</p>
+                        <h3 class="project-title">Personal Portfolio</h3>
+                        <p class="project-description">A modern, responsive portfolio showcasing my freelance projects and
+                            skills, built with HTML, CSS, JavaScript, and featuring a glassmorphic design.</p>
                         <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -1430,20 +1877,53 @@
         <div class="section-container">
             <h2 class="section-title">Testimonials</h2>
             <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Gospel's expertise in full-stack development transformed our platform
-                        into a user-friendly, scalable solution. His vision is unmatched!"</p>
-                    <p class="testimonial-author">Jane Doe, CTO at EduTech</p>
+                <div class="testimonial-card" aria-label="Testimonial from Godswill Victor, CEO at Mr Solution Tech">
+                    <p class="testimonial-text">"Gospel's expertise in full-stack development transformed our cybersecurity
+                        platform into a robust, user-friendly solution. His ability to integrate Laravel with Tailwind CSS
+                        and deliver scalable features was exceptional."</p>
+                    <div class="testimonial-author-container">
+                        <div class="testimonial-avatar"></div>
+                        <div>
+                            <p class="testimonial-author">Godswill Victor</p>
+                            <p class="testimonial-role">CEO, Mr Solution Tech</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Working with Gospel was a game-changer. His ability to deliver secure
-                        and efficient code is truly elite."</p>
-                    <p class="testimonial-author">John Smith, Product Manager</p>
+                <div class="testimonial-card"
+                    aria-label="Testimonial from Mrs. Anne, Proprietress at Aunty Anne's International School">
+                    <p class="testimonial-text">"Gospel's GIGACAD system revolutionized our school’s administrative
+                        processes, automating result generation and class management. His attention to detail and
+                        user-centric design made a significant impact."</p>
+                    <div class="testimonial-author-container">
+                        <div class="testimonial-avatar"></div>
+                        <div>
+                            <p class="testimonial-author">Mrs. Anne</p>
+                            <p class="testimonial-role">Proprietress, Aunty Anne's International School</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Gospel's innovative approach to educational technology has inspired our
-                        team to think bigger and achieve more."</p>
-                    <p class="testimonial-author">Emily Johnson, CEO at LearnSphere</p>
+                <div class="testimonial-card" aria-label="Testimonial from Kingsley, CEO at SpiralTech">
+                    <p class="testimonial-text">"Gospel’s innovative approach to tech education inspired our team to adopt
+                        modern teaching methods. His workshops on HTML and CSS were engaging and highly effective."</p>
+                    <div class="testimonial-author-container">
+                        <div class="testimonial-avatar"></div>
+                        <div>
+                            <p class="testimonial-author">Kingsley</p>
+                            <p class="testimonial-role">CEO, SpiralTech</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" aria-label="Testimonial from Jane Okonkwo, ALX Africa Mentor">
+                    <p class="testimonial-text">"Gospel’s work on ALX projects, particularly in system engineering and
+                        DevOps, showcased his mastery of C and Python. His automation scripts streamlined our deployment
+                        processes, demonstrating technical excellence."</p>
+                    <div class="testimonial-author-container">
+                        <div class="testimonial-avatar"></div>
+                        <div>
+                            <p class="testimonial-author">Jane Okonkwo</p>
+                            <p class="testimonial-role">Mentor, ALX Africa</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1453,20 +1933,34 @@
     <section id="contact" class="section contact">
         <div class="section-container">
             <h2 class="section-title">Get in Touch</h2>
-            <p class="contact-text">Interested in collaborating or learning more about my work? Reach out through any of
-                the platforms below!</p>
+            <p class="contact-text">Interested in collaborating or learning more about my work? Reach out through any of the
+                platforms below!</p>
             <div class="social-links">
-                <a href="https://linkedin.com/in/gospelisaac" class="social-link" target="_blank" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/gospel-isaac-0a20a2107" class="social-link" target="_blank"
+                    aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/gospelisaac" class="social-link" target="_blank" aria-label="GitHub">
+                <a href="https://github.com/gospelin" class="social-link" target="_blank" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://x.com/gospelisaac" class="social-link" target="_blank" aria-label="X">
+                <a href="https://x.com/GospelIsaac1" class="social-link" target="_blank" aria-label="X">
                     <i class="fab fa-x-twitter"></i>
                 </a>
-                <a href="mailto:gospel@example.com" class="social-link" aria-label="Email">
+                <a href="mailto:gospelin.gi@gmail.com" class="social-link" aria-label="Email">
                     <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://facebook.com/gospel-o-isaac" class="social-link" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://discord.com/users/GIGO" class="social-link" target="_blank" aria-label="Discord">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="https://medium.com/@gospelin.gi" class="social-link" target="_blank" aria-label="Medium">
+                    <i class="fab fa-medium"></i>
+                </a>
+                <a href="https://stackoverflow.com/users/8245676/gigo" class="social-link" target="_blank"
+                    aria-label="Stack Overflow">
+                    <i class="fab fa-stack-overflow"></i>
                 </a>
             </div>
         </div>
@@ -1487,13 +1981,11 @@
         // Theme Toggle
         const html = document.documentElement;
         const themeToggle = document.querySelector('#themeToggle');
-        const mobileThemeToggle = document.querySelector('#mobileThemeToggle');
         const savedTheme = localStorage.getItem('theme') || 'dark';
 
         const updateToggleIcons = (theme) => {
             const iconClass = theme === 'light' ? 'fa-moon' : 'fa-sun';
             themeToggle.querySelector('i').className = `fas ${iconClass}`;
-            mobileThemeToggle.querySelector('i').className = `fas ${iconClass}`;
         };
 
         const toggleTheme = () => {
@@ -1507,14 +1999,13 @@
         html.setAttribute('data-theme', savedTheme);
         updateToggleIcons(savedTheme);
         themeToggle.addEventListener('click', toggleTheme);
-        mobileThemeToggle.addEventListener('click', toggleTheme);
 
         // Mobile Menu
         const mobileMenu = document.querySelector('#mobileMenu');
         const mobileNav = document.querySelector('#mobileNav');
         const mobileNavOverlay = document.querySelector('#mobileNavOverlay');
         const mobileNavClose = document.querySelector('#mobileNavClose');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link:not(.theme-toggle)');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
         const toggleMobileMenu = () => {
             const isExpanded = mobileMenu.getAttribute('aria-expanded') === 'true';
@@ -1576,7 +2067,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.section, .section-title, .about-content, .skills-grid, .experience-timeline, .projects-grid, .testimonials-grid, .contact-content').forEach(element => {
+        document.querySelectorAll('.section, .section-title, .about-content, .skills-grid, .education-timeline, .experience-timeline, .projects-grid, .testimonials-grid, .contact-content').forEach(element => {
             element.classList.add('animate-out');
             observer.observe(element);
         });
@@ -1593,9 +2084,8 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-        `;
+            `;
         document.head.appendChild(style);
     </script>
 </body>
-
 </html>
