@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Gospel Isaac - Software Engineer | Full-Stack Developer | Tech Facilitator</title>
+    <meta name="description"
+        content="Portfolio of Gospel Isaac, a software engineer, full-stack developer, and tech visionary specializing in cutting-edge web applications and revolutionary educational platforms.">
+    <meta name="keywords"
+        content="software engineer, full-stack developer, tech instructor, tech facilitator, Gospel Isaac, web development, programming, education technology, cybersecurity, AI">
+    <meta name="author" content="Gospel Isaac">
+    <meta property="og:title" content="Gospel Isaac - Software Engineer | Full-Stack Developer">
+    <meta property="og:description"
+        content="Experience the portfolio of Gospel Isaac, showcasing mastery in software engineering, web development, and revolutionary educational technology.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gospelin.github.io">
+    <meta property="og:image" content="images/gospel.jpg">
+    <link rel="icon" href="images/gospel.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <div class="bg-mesh" aria-hidden="true"></div>
+    <div class="floating-elements" aria-hidden="true">
+        <div class="floating-element" style="width: 20px; height: 20px; top: 10%; left: 15%; animation-duration: 6s;">
+        </div>
+        <div class="floating-element" style="width: 15px; height: 15px; top: 70%; left: 80%; animation-duration: 8s;">
+        </div>
+        <div class="floating-element" style="width: 25px; height: 25px; top: 50%; left: 30%; animation-duration: 10s;">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#home" class="logo" aria-label="Gospel Isaac's logo">
+                <span class="logo-text">GIGO</span>
+            </a>
+            <div class="nav-right">
+                <div class="nav-links" role="menu">
+                    <a href="#home" class="nav-link" role="menuitem">Home</a>
+                    <a href="#about" class="nav-link" role="menuitem">About</a>
+                    <a href="#education" class="nav-link" role="menuitem">Education</a>
+                    <a href="#skills" class="nav-link" role="menuitem">Skills</a>
+                    <a href="#experience" class="nav-link" role="menuitem">Experience</a>
+                    <a href="#projects" class="nav-link" role="menuitem">Projects</a>
+                    <a href="#testimonials" class="nav-link" role="menuitem">Testimonials</a>
+                    <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle between light and dark theme"><i
+                        class="fas fa-moon" aria-hidden="true"></i></button>
+                <div class="mobile-menu" aria-expanded="false" id="mobileMenu" role="button"
+                    aria-label="Toggle mobile navigation">
+                    <span class="hamburger" aria-hidden="true"></span>
+                    <span class="hamburger" aria-hidden="true"></span>
+                    <span class="hamburger" aria-hidden="true"></span>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-nav" aria-hidden="true" id="mobileNav" role="menu">
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close mobile navigation menu">×</button>
+            <div class="mobile-nav-links">
+                <a href="#home" class="mobile-nav-link" role="menuitem">Home</a>
+                <a href="#about" class="mobile-nav-link" role="menuitem">About</a>
+                <a href="#education" class="mobile-nav-link" role="menuitem">Education</a>
+                <a href="#skills" class="mobile-nav-link" role="menuitem">Skills</a>
+                <a href="#experience" class="mobile-nav-link" role="menuitem">Experience</a>
+                <a href="#projects" class="mobile-nav-link" role="menuitem">Projects</a>
+                <a href="#testimonials" class="mobile-nav-link" role="menuitem">Testimonials</a>
+                <a href="#contact" class="mobile-nav-link" role="menuitem">Contact</a>
+            </div>
+        </div>
+        <div class="mobile-nav-overlay" aria-hidden="true" id="mobileNavOverlay"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" role="banner">
+        <div class="hero-content">
+            <h1 class="hero-title" lang="en">Gospel Isaac</h1>
+            <p class="hero-subtitle" lang="en">Software Engineer | Full-Stack Developer | Tech Instructor</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary" role="button" aria-label="Contact Gospel Isaac">Get in
+                    Touch</a>
+                <a href="#projects" class="btn btn-secondary" role="button"
+                    aria-label="View Gospel Isaac's projects">View Projects</a>
+            </div>
+            <div class="hero-stats" role="region" aria-label="Professional statistics">
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Years of Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Certifications</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about" role="region" aria-labelledby="about-title">
+        <div class="section-container">
+            <h2 class="section-title" id="about-title" lang="en">About Me</h2>
+            <div class="about-content">
+                <div class="about-image-container">
+                    <img src="images/gospel.jpg" alt="Portrait of Gospel Isaac, software engineer" class="about-image">
+                </div>
+                <div class="about-text">
+                    <p lang="en">I'm a passionate software engineer with over 5 years of experience building scalable
+                        web applications and innovative software solutions.</p>
+                    <p lang="en">My expertise spans full-stack development, with a focus on creating seamless user
+                        experiences and robust backend systems, with a focus on performance and modern technologies. I
+                        thrive on solving complex problems and pushing the boundaries of what's possible. My mission is
+                        to revolutionize education through technology, making learning accessible and engaging for all.
+                    </p>
+                    <p lang="en">Currently, I'm exploring advancements in AI-driven development and cloud architecture
+                        to create impactful solutions. When I'm not coding, you can find me contributing to open-source
+                        projects or sharing knowledge through tech blogs. I bring a visionary approach to every project.
+                        Let's build the future together!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education" role="region" aria-labelledby="education-title">
+        <div class="section-container">
+            <h2 class="section-title" id="education-title" lang="en">Education</h2>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <h3 lang="en">B.Tech in Computer Science</h3>
+                    <span class="education-date">2014 - 2019</span>
+                    <p lang="en">Federal University of Technology, Owerri</p>
+                </div>
+                <div class="education-item">
+                    <h3 lang="en">Web Development Trainee - ALCwithGoogle</h3>
+                    <span class="education-date">2017 - 2018</span>
+                    <p lang="en">Mastered fundamentals of professional web development, including HTML, CSS, and
+                        JavaScript. Developed dynamic web applications, such as a pixel-art mixer, and collaborated in a
+                        peer-learning environment to enhance problem-solving skills.</p>
+                </div>
+                <div class="education-item">
+                    <h3 lang="en">Web Specialist Trainee - Andela Learning Community</h3>
+                    <span class="education-date">2018 - 2019</span>
+                    <p lang="en">Advanced web development skills through rigorous training focused on JavaScript, APIs,
+                        and responsive design. Developed a fully functional contact application and engaged in
+                        collaborative learning sessions to strengthen teamwork and problem-solving abilities.</p>
+                </div>
+                <div class="education-item">
+                    <h3 lang="en">Software Engineering Program - ALX Africa</h3>
+                    <span class="education-date">2022 - 2023</span>
+                    <p lang="en">Completed an intensive software engineering course, mastering C, Python, System
+                        Engineering, DevOps, and Networking. Built projects focusing on low-level programming,
+                        automation, and network configuration, enhancing skills in scalable system design and
+                        deployment.</p>
+                </div>
+                <div class="education-item certifications">
+                    <h3 lang="en">Certifications</h3>
+                    <ul class="certification-list">
+                        <li><span class="certification-name" lang="en">ALX Software Engineering (ALX Africa)</span> -
+                            <span class="certification-date">2023</span></li>
+                        <li><span class="certification-name" lang="en">Programming in Python (Meta)</span> - <span
+                                class="certification-date">2022</span></li>
+                        <li><span class="certification-name" lang="en">Google Africa Mobile Web Specialist
+                                (ALCwithGoogle)</span> - <span class="certification-date">2019</span></li>
+                        <li><span class="certification-name" lang="en">Web Development Beginner (ALCwithGoogle)</span> -
+                            <span class="certification-date">2018</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills" role="region" aria-labelledby="skills-title">
+        <div class="section-container">
+            <h2 class="section-title" id="skills-title" lang="en">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card" aria-label="HTML and CSS skills">
+                    <i class="fab fa-html5" aria-hidden="true"></i>
+                    <span lang="en">HTML/CSS</span>
+                </div>
+                <div class="skill-card" aria-label="JavaScript skills">
+                    <i class="fab fa-js" aria-hidden="true"></i>
+                    <span lang="en">JavaScript</span>
+                </div>
+                <div class="skill-card" aria-label="PHP skills">
+                    <i class="fab fa-php" aria-hidden="true"></i>
+                    <span lang="en">PHP</span>
+                </div>
+                <div class="skill-card" aria-label="Laravel skills">
+                    <i class="fab fa-laravel" aria-hidden="true"></i>
+                    <span lang="en">Laravel</span>
+                </div>
+                <div class="skill-card" aria-label="Python skills">
+                    <i class="fab fa-python" aria-hidden="true"></i>
+                    <span lang="en">Python</span>
+                </div>
+                <div class="skill-card" aria-label="Database skills">
+                    <i class="fas fa-database" aria-hidden="true"></i>
+                    <span lang="en">Database</span>
+                </div>
+                <div class="skill-card" aria-label="Git skills">
+                    <i class="fab fa-git-alt" aria-hidden="true"></i>
+                    <span lang="en">Git</span>
+                </div>
+                <div class="skill-card" aria-label="C programming skills">
+                    <i class="fas fa-code" aria-hidden="true"></i>
+                    <span lang="en">C</span>
+                </div>
+                <div class="skill-card" aria-label="DevOps skills">
+                    <i class="fas fa-server" aria-hidden="true"></i>
+                    <span lang="en">DevOps</span>
+                </div>
+                <div class="skill-card" aria-label="Networking skills">
+                    <i class="fas fa-network-wired" aria-hidden="true"></i>
+                    <span lang="en">Networking</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience" role="region" aria-labelledby="experience-title">
+        <div class="section-container">
+            <h2 class="section-title" id="experience-title" lang="en">Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <h3 lang="en">Freelance Full-Stack Developer</h3>
+                    <span class="experience-date">2024 - Present</span>
+                    <p lang="en">Designed and developed multiple web applications, including educational platforms and
+                        school management systems, using technologies like Laravel, Flask, MySQL, Tailwind CSS, and
+                        JavaScript. Key projects include GIGACAD, Aunty Anne's International School website, and Mr
+                        Solution, focusing on responsive design, scalable architecture, and user-centric features.</p>
+                </div>
+                <div class="experience-item">
+                    <h3 lang="en">Freelance Web Developer</h3>
+                    <span class="experience-date">2022 - 2024</span>
+                    <p lang="en">Built and maintained websites for small businesses and educational institutions,
+                        utilizing HTML, CSS, JavaScript, and PHP. Delivered projects with a focus on accessibility,
+                        mobile responsiveness, and modern design principles, including a personal portfolio showcasing
+                        freelance work.</p>
+                </div>
+                <div class="experience-item">
+                    <h3 lang="en">IT Facilitator - Spiral Tech Network Limited</h3>
+                    <span class="experience-date">June 2022 - August 2022</span>
+                    <p lang="en">Trained over 100 students in programming fundamentals, HTML, and CSS, fostering
+                        collaborative learning through hands-on workshops and practical exercises.</p>
+                </div>
+                <div class="experience-item">
+                    <h3 lang="en">Lead IT Coordinator - Bliz Ventures Enterprise</h3>
+                    <span class="experience-date">March 2019 - September 2019</span>
+                    <p lang="en">Managed a team of over 100 field agents for the Tradermoni scheme, ensuring efficient
+                        app deployment, providing technical support, and conducting training to enhance operational
+                        efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects" role="region" aria-labelledby="projects-title">
+        <div class="section-container">
+            <h2 class="section-title" id="projects-title" lang="en">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/gigacad-placeholder.png" alt="GIGACAD School Management System interface"
+                        class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title" lang="en">GIGACAD - School Management System</h3>
+                        <p class="project-description" lang="en">A comprehensive school management system built with
+                            Flask, MySQL, SQLAlchemy, and AJAX. Features include automated result generation,
+                            teacher-class assignments, subject management, and student management.</p>
+                        <a href="https://github.com/gospelin/gigacad" class="project-link"
+                            aria-label="View GIGACAD project on GitHub" lang="en">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/auntyannes-placeholder.png"
+                        alt="Aunty Anne's International School website interface" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title" lang="en">Aunty Anne's International School</h3>
+                        <p class="project-description" lang="en">A professional school website for Aunty Anne's
+                            International School, showcasing academic programs and facilities, built with modern web
+                            technologies.</p>
+                        <a href="https://github.com/gospelin/AAIS" class="project-link"
+                            aria-label="View Aunty Anne's International School project on GitHub" lang="en">View on
+                            GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/cybersecurity-placeholder.png"
+                        alt="Mr Solution Tech cybersecurity platform interface" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title" lang="en">Mr Solution Tech - Educational Cybersecurity Platform</h3>
+                        <p class="project-description" lang="en">A Laravel-based platform offering tools like QR code
+                            generator, code viewer, code encrypter, and WhatsApp bot, built with HTML, CSS, Tailwind
+                            CSS, and PHP.</p>
+                        <a href="https://github.com/gospelin/solutions" class="project-link"
+                            aria-label="View Mr Solution Tech project on GitHub" lang="en">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/portfolio-placeholder.png" alt="Personal portfolio website interface"
+                        class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title" lang="en">Personal Portfolio</h3>
+                        <p class="project-description" lang="en">A modern, responsive portfolio showcasing my freelance
+                            projects and skills, built with HTML, CSS, JavaScript, and featuring a glassmorphic design.
+                        </p>
+                        <a href="#" class="project-link" aria-label="View personal portfolio project" lang="en">View
+                            Project <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials" role="region" aria-labelledby="testimonials-title">
+        <div class="section-container">
+            <h2 class="section-title" id="testimonials-title" lang="en">Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" aria-label="Testimonial from Godswill Victor, CEO at Mr Solution Tech">
+                    <p class="testimonial-text" lang="en">"Gospel's expertise in full-stack development transformed our
+                        cybersecurity platform into a robust, user-friendly solution. His ability to integrate Laravel
+                        with Tailwind CSS and deliver scalable features was exceptional."</p>
+                    <div class="testimonial-author-container">
+                        <div class="testimonial-avatar" aria-hidden="true"></div>
+                        <div>
+                            <p class="testimonial-author" lang="en">Godswill Victor</p>
+                            <p class="testimonial-role" lang="en">CEO, Mr Solution Tech</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card"
+                    aria-label="Testimonial from Mrs. Anne, Proprietress at Aunty Anne's International School">
+                    <p class="testimonial-text" lang="en">"Gospel's GIGACAD system revolutionized our school’s
+                        administrative processes, automating result generation and class management. His attention to
+                        detail and user-centric design made a significant impact."</p>
+                    <div class="testimonial-author-container">
+                        <div class="testimonial-avatar" aria-hidden="true"></div>
+                        <div>
+                            <p class="testimonial-author" lang="en">Mrs. Anne</p>
+                            <p class="testimonial-role" lang="en">Proprietress, Aunty Anne's International School</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" aria-label="Testimonial from Kingsley, CEO at SpiralTech">
+                    <p class="testimonial-text" lang="en">"Gospel’s innovative approach to tech education inspired our
+                        team to adopt modern teaching methods. His workshops on HTML and CSS were engaging and highly
+                        effective."</p>
+                    <div class="testimonial-author-container">
+                        <div class="testimonial-avatar" aria-hidden="true"></div>
+                        <div>
+                            <p class="testimonial-author" lang="en">Kingsley</p>
+                            <p class="testimonial-role" lang="en">CEO, SpiralTech</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" aria-label="Testimonial from Jane Okonkwo, ALX Africa Mentor">
+                    <p class="testimonial-text" lang="en">"Gospel’s work on ALX projects, particularly in system
+                        engineering and DevOps, showcased his mastery of C and Python. His automation scripts
+                        streamlined our deployment processes, demonstrating technical excellence."</p>
+                    <div class="testimonial-author-container">
+                        <div class="testimonial-avatar" aria-hidden="true"></div>
+                        <div>
+                            <p class="testimonial-author" lang="en">Jane Okonkwo</p>
+                            <p class="testimonial-role" lang="en">Mentor, ALX Africa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact" role="region" aria-labelledby="contact-title">
+        <div class="section-container">
+            <h2 class="section-title" id="contact-title" lang="en">Get in Touch</h2>
+            <p class="contact-text" lang="en">Interested in collaborating or learning more about my work? Reach out
+                through any of the platforms below!</p>
+            <div class="contact-info" role="region" aria-label="Contact information">
+                <p lang="en"><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+2348069678968"
+                        aria-label="Call Gospel Isaac at +2348069678968" lang="en">+2348069678968</a></p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/gospel-isaac-0a20a2107" class="social-link" target="_blank"
+                    aria-label="Connect with Gospel Isaac on LinkedIn" lang="en">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/gospelin" class="social-link" target="_blank"
+                    aria-label="View Gospel Isaac's GitHub profile" lang="en">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://x.com/GospelIsaac1" class="social-link" target="_blank"
+                    aria-label="Follow Gospel Isaac on X" lang="en">
+                    <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="mailto:gospelin.gi@gmail.com" class="social-link" aria-label="Email Gospel Isaac" lang="en">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+                <a href="https://facebook.com/gospel-o-isaac" class="social-link" target="_blank"
+                    aria-label="Connect with Gospel Isaac on Facebook" lang="en">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+                <a href="https://discord.com/users/GIGO" class="social-link" target="_blank"
+                    aria-label="Join Gospel Isaac on Discord" lang="en">
+                    <i class="fab fa-discord" aria-hidden="true"></i>
+                </a>
+                <a href="https://medium.com/@gospelin.gi" class="social-link" target="_blank"
+                    aria-label="Read Gospel Isaac's Medium articles" lang="en">
+                    <i class="fab fa-medium" aria-hidden="true"></i>
+                </a>
+                <a href="https://stackoverflow.com/users/8245676/gigo" class="social-link" target="_blank"
+                    aria-label="View Gospel Isaac's Stack Overflow profile" lang="en">
+                    <i class="fab fa-stack-overflow" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <p lang="en">© <span id="copyright-year"></span> Gospel Isaac. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Scroll back to top of page"><i class="fas fa-arrow-up"
+            aria-hidden="true"></i></button>
+
+    <!-- JavaScript -->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
