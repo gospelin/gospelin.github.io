@@ -1466,6 +1466,10 @@ body {
         display: flex;
     }
 
+    .mobile-menu.active .hamburger {
+        display: none;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
         text-align: center;
