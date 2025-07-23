@@ -2,20 +2,24 @@
 <html lang="en" data-theme="dark">
 
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Gospel Isaac - Software Engineer | Full-Stack Software Developer | Tech Facilitator</title>
     <meta name="description"
         content="Portfolio of Gospel Isaac, a software engineer and full-stack developer creating innovative web applications and educational platforms.">
     <meta name="keywords"
         content="software engineer, full-stack developer, tech facilitator, Gospel Isaac, web development, education technology, AI, DevOps">
     <meta name="author" content="Gospel Isaac">
+
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Gospel Isaac - Software Engineer | Full-Stack Software Developer">
     <meta property="og:description"
         content="Discover Gospel Isaac's portfolio, showcasing expertise in web development, AI-driven solutions, and educational technology.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gospelin.github.io">
     <meta property="og:image" content="images/gospel.jpg">
+
+    <!-- JSON-LD Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -30,15 +34,27 @@
         ]
     }
     </script>
+
+    <!-- Favicon and Styles -->
     <link rel="icon" href="images/gospel.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+
+    <title>Gospel Isaac - Software Engineer | Full-Stack Software Developer | Tech Facilitator</title>
 </head>
 
 <body>
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner" aria-hidden="true">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
     <!-- Background Effects -->
     <div class="bg-mesh" aria-hidden="true"></div>
 
@@ -59,8 +75,9 @@
                     <a href="#testimonials" class="nav-link" role="menuitem">Testimonials</a>
                     <a href="#contact" class="nav-link" role="menuitem">Contact</a>
                 </div>
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle between light and dark theme"><i
-                        class="fas fa-moon" aria-hidden="true"></i></button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle between light and dark theme">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
                 <div class="mobile-menu" aria-expanded="false" id="mobileMenu" role="button"
                     aria-label="Toggle mobile navigation">
                     <span class="hamburger" aria-hidden="true"></span>
@@ -90,11 +107,12 @@
         <div class="floating-particles" aria-hidden="true"></div>
         <div class="hero-content">
             <h1 class="hero-title" lang="en">Gospel Isaac</h1>
-            <p class="hero-subtitle" lang="en">Software Engineer | Full-Stack Software Developer | Tech Facilitator</p>
+            <p class="hero-subtitle" lang="en"><span id="typewriter"></span></p>
             <p class="hero-tagline" lang="en">Building innovative web solutions and transforming education through
                 technology.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary" role="button" aria-label="Contact Gospel Isaac">Get in Touch</a>
+                <a href="#contact" class="btn btn-primary" role="button" aria-label="Contact Gospel Isaac">Get in
+                    Touch</a>
                 <a href="assets/Gospel Isaac - CV.pdf" class="btn btn-secondary" role="button"
                     aria-label="Download Gospel Isaac's resume" download>Download Resume</a>
             </div>
@@ -191,6 +209,7 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="section skills" role="region" aria-labelledby="skills-title">
         <div class="section-container">
             <h2 class="section-title" id="skills-title" lang="en">Skills</h2>
@@ -199,6 +218,7 @@
                     <h4>Frontend</h4>
                     <div class="skill-item"><i class="fab fa-html5" aria-hidden="true"></i> HTML/CSS</div>
                     <div class="skill-item"><i class="fab fa-js" aria-hidden="true"></i> JavaScript</div>
+                    <div class="skill-item"><i class="fab fa-bootstrap" aria-hidden="true"></i> Bootstrap</div>
                 </div>
                 <div class="skill-card" aria-label="Backend skills">
                     <h4>Backend</h4>
@@ -272,8 +292,6 @@
                         <div class="project-links">
                             <a href="https://github.com/gospelin/gigacad" class="project-link"
                                 aria-label="View GIGACAD on GitHub" lang="en">GitHub</a>
-                            <a href="https://gigacad.demo" class="project-link" aria-label="View GIGACAD live demo"
-                                lang="en">Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -406,8 +424,8 @@
                     aria-label="View Gospel Isaac's GitHub profile" lang="en">
                     <i class="fab fa-github" aria-hidden="true"></i>
                 </a>
-                <a href="https://x.com/GospelIsaac1" class="social-link" target="_blank" aria-label="Follow Gospel Isaac on X"
-                    lang="en">
+                <a href="https://x.com/GospelIsaac1" class="social-link" target="_blank"
+                    aria-label="Follow Gospel Isaac on X" lang="en">
                     <i class="fab fa-x-twitter" aria-hidden="true"></i>
                 </a>
                 <a href="mailto:gospelin.gi@gmail.com" class="social-link" aria-label="Email Gospel Isaac" lang="en">
@@ -446,10 +464,11 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" aria-label="Scroll back to top"><i class="fas fa-arrow-up"
-            aria-hidden="true"></i></button>
+    <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
 
-    <!-- JavaScript -->
+    <!-- Scripts -->
     <script src="js/scripts.js"></script>
     <script src="js/particles.js"></script>
 </body>
